@@ -23,32 +23,49 @@
     </style>
 </head>
 
-<body onload="setupFunction();">
-    <h1>Luke Ritchie</h1>
-    <div>
-        <table>
-            <tr>
-                <td>
-                    <button class="button">Test</button>
-                </td>
-                <td>
-                    <button class="button">Work</button>
-                </td>
-                <td>
-                    <button class="button">Resume</button>
-                </td>
-                <td>
-                    <button class="button">GitHub</button>
-                </td>
-                <td>
-                    <button class="button">Details</button>
-                </td>
-            </tr>
-        </table>
-    </div>
+<body id="body" onload="setupFunction();">
+
 </body>
 
 <script>
+    function setupFunction() {
+        var body = document.getElementById("body");
+        var table = document.createElement("table");
+        var row = document.createElement("tr");
+        for (var i = 0; i < 5; i++) {
+            var cell = document.createElement("td");
+            cell.id = "C" + i;
+            console.log("Cell ", i, "'s ID = ", cell.id);
+        }
+        var button0 = document.createElement("button");
+        var button1 = document.createElement("button");
+        var button2 = document.createElement("button");
+        var button3 = document.createElement("button");
+        var button4 = document.createElement("button");
+        button0.innerHTML = "Test";
+        button0.className = "button";
+        button1.innerHTML = "Work";
+        button1.className = "button";
+        button2.innerHTML = "Resume";
+        button2.className = "button";
+        button3.innerHTML = "GitHub";
+        button3.className = "button";
+        button4.innerHTML = "Details";
+        button4.className = "button";
+        document.getElementById("C0").appendChild(button0);
+        document.getElementById("C1").appendChild(button1);
+        document.getElementById("C2").appendChild(button2);
+        document.getElementById("C3").appendChild(button3);
+        document.getElementById("C4").appendChild(button4);
+        for (var i = 0; i < 5; i++) {
+            row.appendChild(document.getElementById("C" + i));
+        }
+        table.appendChild(row);
+        body.appendChild(body);
+
+    }
 </script>
+
+</html>
 
 </html>
