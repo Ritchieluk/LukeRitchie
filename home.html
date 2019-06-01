@@ -1,65 +1,10 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title> Luke Ritchie
 
     </title>
-    <style>
-        .name-header {
-            color: navy;
-            margin: auto;
-            text-align: center;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 60px;
-        }
-        
-        .horizon {
-            color: #101010;
-        }
-        
-        .body {
-            background-color: rgb(219, 246, 255);
-            text-align: center;
-        }
-        
-        .text-box {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        
-        .table {
-            text-align: center;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .button {
-            background-color: #3875d1;
-            border: none;
-            color: white;
-            padding: 8px 13.5px;
-            text-align: center;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        
-        .profile-pic {
-            border: px black;
-            border-radius: 30px;
-            width: 200px;
-            height: 300px;
-        }
-        
-        .polaroid {
-            width: 80%;
-            border-radius: 30px;
-            background-color: white;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-        
-        .button:hover {
-            background-color: #2b5ca5
-        }
-    </style>
 </head>
 
 <body id="body" class="body" onload="setupFunction();">
@@ -81,7 +26,7 @@
         var table = document.createElement("table");
         table.className = "table";
         var row = document.createElement("tr");
-        for (var i = 0; i < 5; i++) {
+        for (var i = 0; i < 7; i++) {
             var cell = document.createElement("td");
             cell.id = "C" + i;
             console.log("Cell ", i, "'s ID = ", cell.id);
@@ -94,24 +39,101 @@
         var button2 = document.createElement("button");
         var button3 = document.createElement("button");
         var button4 = document.createElement("button");
+        var button5 = document.createElement("button");
+        var button6 = document.createElement("button");
         button0.innerHTML = "Test";
+        button0.id = "Test";
+        addListener(button0, "click", testButton);
         button0.className = "button";
         button1.innerHTML = "Work";
+        button1.id = "Work";
+        addListener(button1, "click", workButton);
         button1.className = "button";
         button2.innerHTML = "Resume";
+        button1.id = "Resume";
+        addListener(button2, "click", resumeButton);
         button2.className = "button";
         button3.innerHTML = "GitHub";
+        button3.id = "Github";
+        addListener(button3, "click", githubButton);
         button3.className = "button";
         button4.innerHTML = "Details";
+        button4.id = "Details";
+        addListener(button4, "click", detailsButton);
         button4.className = "button";
+        button5.innerHTML = "Blog";
+        button5.id = "Blog";
+        addListener(button5, "click", blogButton);
+        button5.className = "button";
+        button6.innerHTML = "Server";
+        button6.id = "Server"
+        addListener(button6, "click", serverButton);
+        button6.className = "button";
         document.getElementById("C0").appendChild(button0);
         document.getElementById("C1").appendChild(button1);
         document.getElementById("C2").appendChild(button2);
         document.getElementById("C3").appendChild(button3);
         document.getElementById("C4").appendChild(button4);
-        for (var i = 0; i < 5; i++) {
+        document.getElementById("C5").appendChild(button5);
+        document.getElementById("C6").appendChild(button6);
+        for (var i = 0; i < 7; i++) {
             row.appendChild(document.getElementById("C" + i));
         }
+        setupHomePage();
+    }
+
+    function addListener(element, eventName, handler) {
+        if (element.addEventListener) {
+            element.addEventListener(eventName, handler, false);
+        } else if (element.attachEvent) {
+            element.attachEvent('on' + eventName, handler);
+        } else {
+            element['on' + eventName] = handler;
+        }
+    }
+
+    function removeListener(element, eventName, handler) {
+        if (element.addEventListener) {
+            element.removeEventListener(eventName, handler, false);
+        } else if (element.detachEvent) {
+            element.detachEvent('on' + eventName, handler);
+        } else {
+            element['on' + eventName] = null;
+        }
+    }
+
+    function testButton() {
+        var test = document.getElementById("Test");
+        test.className = "selected-button";
+        window.location.href = './test.html';
+    }
+
+    function workButton() {
+
+    }
+
+    function resumeButton() {
+
+    }
+
+    function githubButton() {
+
+    }
+
+    function detailsButton() {
+
+    }
+
+    function blogButton() {
+
+    }
+
+    function serverButton() {
+
+    }
+
+
+    function setupHomePage() {
         var row1 = document.createElement("tr");
         var cell1 = document.createElement('td');
         var cell2 = document.createElement('td');
@@ -129,6 +151,7 @@
         img.src = "Luke Ritchie_0150.jpg";
         img.className = "polaroid";
         cell1.appendChild(img);
+        var breakSpace = document.createElement("br");
         body.appendChild(breakSpace);
         body.appendChild(table1);
     }
