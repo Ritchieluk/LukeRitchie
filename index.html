@@ -5,7 +5,32 @@
 
     </title>
     <style>
-        .name-header {}
+        .name-header {
+            color: navy;
+            margin: auto;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 60px;
+        }
+        
+        .horizon {
+            color: #101010;
+        }
+        
+        .body {
+            background-color: rgb(177, 229, 247);
+            text-align: center;
+        }
+        
+        .text-box {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .table {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
         
         .button {
             background-color: #3875d1;
@@ -23,20 +48,33 @@
     </style>
 </head>
 
-<body id="body" onload="setupFunction();">
+<body id="body" class="body" onload="setupFunction();">
 
 </body>
 
 <script>
     function setupFunction() {
         var body = document.getElementById("body");
+        var header = document.createElement("h1");
+        header.className = "name-header";
+        header.innerHTML = "Luke Ritchie";
+        body.appendChild(header);
+        var hr = document.createElement("hr");
+        hr.className = "horizon";
+        body.appendChild(hr);
+        var breakSpace = document.createElement("br");
+        body.appendChild(breakSpace);
         var table = document.createElement("table");
+        table.className = "table";
         var row = document.createElement("tr");
         for (var i = 0; i < 5; i++) {
             var cell = document.createElement("td");
             cell.id = "C" + i;
             console.log("Cell ", i, "'s ID = ", cell.id);
+            row.appendChild(cell);
         }
+        table.appendChild(row);
+        body.appendChild(table);
         var button0 = document.createElement("button");
         var button1 = document.createElement("button");
         var button2 = document.createElement("button");
@@ -60,8 +98,11 @@
         for (var i = 0; i < 5; i++) {
             row.appendChild(document.getElementById("C" + i));
         }
-        table.appendChild(row);
-        body.appendChild(body);
+
+        var p1 = document.createElement("p");
+        p1.className = "text-box";
+        body.appendChild(p1);
+        p1.innerHTML = "Hey guys, welcome to my page! It's still a work in progress, but thanks for checking it out!";
 
     }
 </script>
