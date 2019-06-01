@@ -18,7 +18,7 @@
         }
         
         .body {
-            background-color: rgb(177, 229, 247);
+            background-color: rgb(219, 246, 255);
             text-align: center;
         }
         
@@ -40,6 +40,11 @@
             text-align: center;
             font-size: 16px;
             cursor: pointer;
+        }
+        
+        .profile-pic {
+            width: 200px;
+            height: 300px;
         }
         
         .button:hover {
@@ -98,12 +103,25 @@
         for (var i = 0; i < 5; i++) {
             row.appendChild(document.getElementById("C" + i));
         }
-
+        var row1 = document.createElement("tr");
+        var cell1 = document.createElement('td');
+        var cell2 = document.createElement('td');
+        row1.appendChild(cell1);
+        row1.appendChild(cell2);
+        var table1 = document.createElement("table");
+        table1.className = "table";
+        table1.appendChild(row1);
         var p1 = document.createElement("p");
         p1.className = "text-box";
         body.appendChild(p1);
         p1.innerHTML = "Hey guys, welcome to my page! It's still a work in progress, but thanks for checking it out!";
-
+        cell2.appendChild(p1);
+        var img = document.createElement("img");
+        img.src = "Luke Ritchie_0150.jpg";
+        img.className = "profile-pic";
+        cell1.appendChild(img);
+        body.appendChild(breakSpace);
+        body.appendChild(table1);
     }
 </script>
 
