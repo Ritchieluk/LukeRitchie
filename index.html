@@ -109,12 +109,12 @@
 
     function workButton() {
         var work = document.getElementById("Work");
-        window.location.href = './test.html';
+        window.location.href = './work.html';
     }
 
     function resumeButton() {
         var resume = document.getElementById("Resume");
-        window.location.href = './test.html';
+        window.location.href = './resume.html';
     }
 
     function githubButton() {
@@ -123,17 +123,17 @@
 
     function detailsButton() {
         var test = document.getElementById("Test");
-        window.location.href = './test.html';
+        window.location.href = './details.html';
     }
 
     function blogButton() {
         var test = document.getElementById("Test");
-        window.location.href = './test.html';
+        window.location.href = './blog.html';
     }
 
     function serverButton() {
         var test = document.getElementById("Test");
-        window.location.href = './test.html';
+        window.location.href = './server.html';
     }
 
 
@@ -148,9 +148,12 @@
         table1.appendChild(row1);
         var p1 = document.createElement("p");
         p1.className = "text-box";
-        body.appendChild(p1);
         p1.innerHTML = "Hey guys, welcome to my page! It's still a work in progress, but thanks for checking it out!";
+        var p2 = document.createElement("p");
+        p2.className = "text-box";
+        p2.innerHTML = "If you're curious about the work I am doing on this site, it can be found on my GitHub. Press the \"Github\" button to check it out!";
         cell2.appendChild(p1);
+        cell2.appendChild(p2);
         var img = document.createElement("img");
         img.src = "Luke Ritchie_0150.jpg";
         img.className = "polaroid";
