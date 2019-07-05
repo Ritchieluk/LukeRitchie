@@ -7,7 +7,6 @@
         <NavToolbar
         @toggle="drawer=!drawer"/>
         <v-content>
-            Home Page
         </v-content>
     </v-app>
    
