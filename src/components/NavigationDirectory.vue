@@ -40,7 +40,7 @@
                 Blog
             </v-list-tile-content>
         </v-list-tile>
-        <v-list-tile>
+        <v-list-tile @click="github">
             <v-list-tile-action>
                 <v-icon>fab fa-github</v-icon>
             </v-list-tile-action>
@@ -48,7 +48,7 @@
                 Github
             </v-list-tile-content>
         </v-list-tile>
-        <v-list-tile>
+        <v-list-tile @click="linkedin">
             <v-list-tile-action>
                 <v-icon>fab fa-linkedin</v-icon>
             </v-list-tile-action>
@@ -61,7 +61,15 @@
 
 <script>
 export default {
-
+    methods: {
+        github: function(){
+            console.log("routing to github");
+            window.location.href = "https://github.com/ritchieluk";
+        },
+        linkedin: function(){
+            window.location.href = "https://www.linkedin.com/in/luke-ritchie-798b8b15b/";
+        }
+    }
 }
 </script>
 

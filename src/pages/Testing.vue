@@ -1,10 +1,27 @@
 <template>
-    <v-content>Testing Page</v-content>
+    <v-content>
+        <v-container>
+            <v-layout>
+                <v-flex md6>
+                    <v-card>
+                    Testing Page
+                    </v-card>
+                </v-flex>
+                <v-flex md6>
+                    <Profile/>
+                </v-flex>
+            </v-layout>
+        </v-container>   
+    </v-content>
 </template>
 
 <script>
-export default {
+import Profile from "./../components/HomePage/ProfilePicture";
 
+export default {
+    components: {
+        Profile: Profile
+    }
 }
 </script>
 

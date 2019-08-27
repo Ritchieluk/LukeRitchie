@@ -3,12 +3,11 @@
         <v-toolbar-side-icon
         @click.stop="$emit('toggle')">
         </v-toolbar-side-icon>
-        <v-toolbar-title>
-            <v-btn large flat @click="goHome">
-                <span style="">
-                    Luke Ritchie
-                </span>
+        <v-btn icon>
+                <v-icon>mdi-home</v-icon>
             </v-btn>
+        <v-toolbar-title class="headline">
+            <span>Luke Ritchie</span>
         </v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-sm-and-down">

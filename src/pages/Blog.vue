@@ -7,16 +7,7 @@
         <NavToolbar
         @toggle="drawer=!drawer"/>
         <v-content>
-            <v-container align-content-start>
-                <v-layout align-content-start>
-                        <v-flex md4 class="pa-3">
-                            <Profile/>
-                        </v-flex>
-                        <v-flex md8 class="pa-3">
-                            <Details/>
-                        </v-flex>
-                </v-layout>
-            </v-container>
+            Blog Page
         </v-content>
     </v-app>
    
@@ -25,19 +16,14 @@
 <script>
 import NavigationToolbar from "../components/NavigationToolbar";
 import NavigationDrawer from "../components/NavigationDrawer";
-import Profile from "../components/HomePage/ProfilePicture";
-import Details from "../components/HomePage/HomeDetails";
 
-//test test
 export default {
     data: ()=>({
         drawer: false
     }),
     components: {
         NavToolbar: NavigationToolbar,
-        NavDrawer: NavigationDrawer,
-        Profile: Profile,
-        Details: Details
+        NavDrawer: NavigationDrawer
     },
     methods: {
         checkDrawer: function(value){
