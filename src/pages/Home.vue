@@ -1,3 +1,7 @@
+<!-- 
+This page could stand to have basic contact info, a featured section of work of my choice, a
+current status could be interesting. 
+-->
 <template>
     <v-app>
         <NavDrawer

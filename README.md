@@ -1,5 +1,10 @@
 # LukeRitchie.me
-The repository for my personal site.  Not much else to say.
+The repository for the front end of my personal site.
 
-### Plans
-Since I am gonna be creating a dynamic vue site, I will likely end up hosting this with AWS and redirecting to it with a github page
+### Goals
+* Further strengthen my knowledge of Vue, web development, and web deployment
+* Create a single source for my information that enhances the information already stored on my Linkedin or Github
+* Create pages for demos of my projects and school work
+* Deploy the front end using Github Pages or AWS
+* Link it to a back end (TBD)
+* Have fun working on a personal project

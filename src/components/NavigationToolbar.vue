@@ -17,9 +17,11 @@
             <v-btn>
                 Work
             </v-btn>
+            <!--
             <v-btn>
                 Details
             </v-btn>
+            -->
             <v-btn>
                 Blog
             </v-btn>

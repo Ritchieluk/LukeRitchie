@@ -1,3 +1,8 @@
+<!--
+I think this will function similarly to the App gallery, where we feature some segments of work I've done
+and then clicking on them takes you to a fuller page with a link to the related blog post, a demo of the project
+and snippets of code. This will basically be Github++ is the hope.
+-->
 <template>
     <v-app>
         <NavDrawer

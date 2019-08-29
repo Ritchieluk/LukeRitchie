@@ -1,3 +1,7 @@
+<!--
+This is the place I can discuss things, whether for various projects or work experiences I've had or just
+my current plans as a member of the industry etc. 
+-->
 <template>
     <v-app>
         <NavDrawer
