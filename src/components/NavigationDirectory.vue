@@ -1,6 +1,6 @@
 <template>
     <v-list>
-        <v-list-tile>
+        <v-list-tile @click.stop="goHome">
             <v-list-tile-action>
                 <v-icon>mdi-home</v-icon>
             </v-list-tile-action>
@@ -8,7 +8,7 @@
                 Home
             </v-list-tile-content>
         </v-list-tile>
-        <v-list-tile>
+        <v-list-tile :to="{name: 'Resume'}">
             <v-list-tile-action>
                 <v-icon>fas fa-clipboard</v-icon>
             </v-list-tile-action>
@@ -16,7 +16,7 @@
                 Resume
             </v-list-tile-content>
         </v-list-tile>
-        <v-list-tile>
+        <v-list-tile :to="{name: 'Work'}">
             <v-list-tile-action>
                 <v-icon>fas fa-code</v-icon>
             </v-list-tile-action>
@@ -24,7 +24,7 @@
                 Work
             </v-list-tile-content>
         </v-list-tile>
-        <v-list-tile>
+        <v-list-tile :to="{name: 'Details'}">
             <v-list-tile-action>
                 <v-icon>fas fa-info-circle</v-icon>
             </v-list-tile-action>
@@ -32,7 +32,7 @@
                 Details
             </v-list-tile-content>
         </v-list-tile>
-        <v-list-tile>
+        <v-list-tile :to="{name: 'Blog'}">
             <v-list-tile-action>
                 <v-icon>fas fa-book</v-icon>
             </v-list-tile-action>
@@ -62,6 +62,9 @@
 <script>
 export default {
     methods: {
+        goHome: function(){
+            this.$router.push({name: 'Home'});
+        },
         github: function(){
             console.log("routing to github");
             window.location.href = "https://github.com/ritchieluk";
