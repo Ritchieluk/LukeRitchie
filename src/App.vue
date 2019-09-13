@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app dark>
     <NavDrawer
         :display="drawer"
         @input="checkDrawer"
