@@ -1,16 +1,21 @@
 <template>
-    <v-app dark>
-        <router-view>
-        </router-view>
-    </v-app>
+  <v-app>
+    <router-view></router-view>
+  </v-app>
 </template>
 
 <script>
+import HelloWorld from './components/HelloWorld'
+
 export default {
-    name: "app"
+  name: 'App',
+  components: {
+    HelloWorld
+  },
+  data () {
+    return {
+      //
+    }
+  }
 }
 </script>
-
-<style>
-
-</style>
