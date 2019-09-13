@@ -1,21 +1,33 @@
 <template>
   <v-app>
-    <router-view></router-view>
+    <NavDrawer
+        :display="drawer"
+        @input="checkDrawer"
+        />
+        <NavToolbar
+        @toggle="drawer=!drawer"/>
+        <v-content>
+          <router-view></router-view>
+        </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import NavigationToolbar from "./components/NavigationToolbar";
+import NavigationDrawer from "./components/NavigationDrawer";
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  },
-  data () {
-    return {
-      //
+    data: ()=>({
+        drawer: false
+    }),
+    components: {
+        NavToolbar: NavigationToolbar,
+        NavDrawer: NavigationDrawer
+    },
+    methods: {
+        checkDrawer: function(value){
+            this.drawer=value;
+        }
     }
-  }
 }
 </script>

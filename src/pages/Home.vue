@@ -1,30 +1,17 @@
 <template>
-    <v-app>
-        <NavDrawer
-        :display="drawer"
-        @input="checkDrawer"
-        />
-        <NavToolbar
-        @toggle="drawer=!drawer"/>
-        <v-content>
-            <v-container align-content-start>
-                <v-layout align-content-start>
-                        <v-flex md4 class="pa-3">
-                            <Profile/>
-                        </v-flex>
-                        <v-flex md8 class="pa-3">
-                            <Details/>
-                        </v-flex>
-                </v-layout>
-            </v-container>
-        </v-content>
-    </v-app>
-   
+    <v-container align-content-start>
+        <v-layout align-content-start>
+                <v-flex md4 class="pa-3">
+                    <Profile/>
+                </v-flex>
+                <v-flex md8 class="pa-3">
+                    <Details/>
+                </v-flex>
+        </v-layout>
+    </v-container>
 </template>
 
 <script>
-import NavigationToolbar from "../components/NavigationToolbar";
-import NavigationDrawer from "../components/NavigationDrawer";
 import Profile from "../components/HomePage/ProfilePicture";
 import Details from "../components/HomePage/HomeDetails";
 
@@ -34,15 +21,8 @@ export default {
         drawer: false
     }),
     components: {
-        NavToolbar: NavigationToolbar,
-        NavDrawer: NavigationDrawer,
         Profile: Profile,
         Details: Details
-    },
-    methods: {
-        checkDrawer: function(value){
-            this.drawer=value;
-        }
     }
 }
 </script>

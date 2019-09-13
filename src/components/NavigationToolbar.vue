@@ -1,8 +1,10 @@
 <template>
-    <v-toolbar>
-        <v-toolbar-side-icon
+    <v-toolbar max-height="64">
+        <v-btn
+        icon
         @click.stop="$emit('toggle')">
-        </v-toolbar-side-icon>
+        <v-icon>mdi-menu</v-icon>
+        </v-btn>
         <v-btn @click.stop="goHome" icon>
                 <v-icon>mdi-home</v-icon>
             </v-btn>

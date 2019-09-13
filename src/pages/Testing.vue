@@ -1,18 +1,16 @@
 <template>
-    <v-content>
-        <v-container>
-            <v-layout>
-                <v-flex md6>
-                    <v-card>
-                    Testing Page
-                    </v-card>
-                </v-flex>
-                <v-flex md6>
-                    <Profile/>
-                </v-flex>
-            </v-layout>
-        </v-container>   
-    </v-content>
+    <v-container>
+        <v-layout>
+            <v-flex md6>
+                <v-card>
+                Testing Page
+                </v-card>
+            </v-flex>
+            <v-flex md6>
+                <Profile/>
+            </v-flex>
+        </v-layout>
+    </v-container>   
 </template>
 
 <script>

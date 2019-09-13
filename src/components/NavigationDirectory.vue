@@ -1,61 +1,61 @@
 <template>
     <v-list>
-        <v-list-tile @click.stop="goHome">
-            <v-list-tile-action>
+        <v-list-item @click.stop="goHome">
+            <v-list-item-action>
                 <v-icon>mdi-home</v-icon>
-            </v-list-tile-action>
-            <v-list-tile-content>
+            </v-list-item-action>
+            <v-list-item-content>
                 Home
-            </v-list-tile-content>
-        </v-list-tile>
-        <v-list-tile :to="{name: 'Resume'}">
-            <v-list-tile-action>
+            </v-list-item-content>
+        </v-list-item>
+        <v-list-item :to="{name: 'Resume'}">
+            <v-list-item-action>
                 <v-icon>fas fa-clipboard</v-icon>
-            </v-list-tile-action>
-            <v-list-tile-content>
+            </v-list-item-action>
+            <v-list-item-content>
                 Resume
-            </v-list-tile-content>
-        </v-list-tile>
-        <v-list-tile :to="{name: 'Work'}">
-            <v-list-tile-action>
+            </v-list-item-content>
+        </v-list-item>
+        <v-list-item :to="{name: 'Work'}">
+            <v-list-item-action>
                 <v-icon>fas fa-code</v-icon>
-            </v-list-tile-action>
-            <v-list-tile-content>
+            </v-list-item-action>
+            <v-list-item-content>
                 Work
-            </v-list-tile-content>
-        </v-list-tile>
-        <v-list-tile :to="{name: 'Details'}">
-            <v-list-tile-action>
+            </v-list-item-content>
+        </v-list-item>
+        <v-list-item :to="{name: 'Details'}">
+            <v-list-item-action>
                 <v-icon>fas fa-info-circle</v-icon>
-            </v-list-tile-action>
-            <v-list-tile-content>
+            </v-list-item-action>
+            <v-list-item-content>
                 Details
-            </v-list-tile-content>
-        </v-list-tile>
-        <v-list-tile :to="{name: 'Blog'}">
-            <v-list-tile-action>
+            </v-list-item-content>
+        </v-list-item>
+        <v-list-item :to="{name: 'Blog'}">
+            <v-list-item-action>
                 <v-icon>fas fa-book</v-icon>
-            </v-list-tile-action>
-            <v-list-tile-content>
+            </v-list-item-action>
+            <v-list-item-content>
                 Blog
-            </v-list-tile-content>
-        </v-list-tile>
-        <v-list-tile @click="github">
-            <v-list-tile-action>
+            </v-list-item-content>
+        </v-list-item>
+        <v-list-item @click="github">
+            <v-list-item-action>
                 <v-icon>fab fa-github</v-icon>
-            </v-list-tile-action>
-            <v-list-tile-content>
+            </v-list-item-action>
+            <v-list-item-content>
                 Github
-            </v-list-tile-content>
-        </v-list-tile>
-        <v-list-tile @click="linkedin">
-            <v-list-tile-action>
+            </v-list-item-content>
+        </v-list-item>
+        <v-list-item @click="linkedin">
+            <v-list-item-action>
                 <v-icon>fab fa-linkedin</v-icon>
-            </v-list-tile-action>
-            <v-list-tile-content>
+            </v-list-item-action>
+            <v-list-item-content>
                 LinkedIn
-            </v-list-tile-content>
-        </v-list-tile>
+            </v-list-item-content>
+        </v-list-item>
     </v-list>
 </template>
 
